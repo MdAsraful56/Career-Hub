@@ -1,6 +1,14 @@
+import { NavLink } from "react-router";
 
 
 const Navber = () => {
+
+    const links = <>
+        <li><NavLink to='/'>Statistics</NavLink></li>
+        <li><NavLink to='/'>Applied Jobs</NavLink></li>
+        <li><NavLink to='/'>Blog</NavLink></li>
+    </>
+
     return (
         <div className="navbar bg-base-100 shadow-sm">
         <div className="navbar-start">
@@ -22,30 +30,25 @@ const Navber = () => {
             <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-            <li><a>Statistics</a></li>
-            <li><a>Applied Jobs</a></li>
-            <li><a>Blog</a></li>
+                {
+                    links
+                }
             </ul>
         </div>
-        <a className="btn btn-ghost text-2xl font-semibold">CareerHub</a>
+        <a className="btn btn-ghost lg:text-2xl text-xl font-semibold">CareerHub</a>
         </div>
         <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-            <li><a>Statistics</a></li>
-            <li><a>Applied Jobs</a></li>
-            <li><a>Blog</a></li>
+            {
+                links
+            }
         </ul>
         </div>
         <div className="navbar-end">
-        <a className="btn px-4 py-5 rounded-lg text-white text-base bg-[#9873FF]">Star Applying</a>
+        <a className="btn lg:px-4 lg:py-5 px-2 py-3 rounded-lg text-white text-sm lg:text-base bg-[#9873FF]">Star Applying</a>
         </div>
         </div>
     );
 };
 
 export default Navber;
-
-
-            // 
-            // 
-            // 
