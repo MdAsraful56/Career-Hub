@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const CategoryCard = ({ list }) => {
     const {logo, category_name, availability } = list;
-    console.log(list)
+    // console.log(list)
     
     return (
         <div className="bg-[#7E90FE0D] text-left space-y-4 p-5">

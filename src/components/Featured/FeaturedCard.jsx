@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types'; // ES6
 import { CiLocationOn } from "react-icons/ci";
 import { AiOutlineDollarCircle } from "react-icons/ai";
+import { Link } from 'react-router';
 
 
 
 const FeaturedCard = ({ job }) => {
-    const { company_name, job_title, job_type, location, logo, remote_or_onsite, salary } = job;
+    const { id, company_name, job_title, job_type, location, logo, remote_or_onsite, salary } = job;
     // console.log(job);
     return (
         <div className="border border-gray-400 text-left space-y-2 p-5 rounded-2xl">
@@ -26,7 +27,10 @@ const FeaturedCard = ({ job }) => {
                     <p className="">{salary}</p>
                 </div>
             </div>
-            <button className="btn bg-blue-500 font-semibold text-white text-sm rounded-sm ">View Details</button>
+            
+            <Link to={`/job/${id}`}>
+                <button className="btn bg-blue-500 font-semibold text-white text-sm rounded-sm ">View Details</button>
+            </Link>
         </div>
     );
 };
