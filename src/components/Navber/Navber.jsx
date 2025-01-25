@@ -1,4 +1,5 @@
 import { NavLink } from "react-router";
+import logo from "../../assets/logo/CareerHub.png"
 
 
 const Navber = () => {
@@ -35,7 +36,8 @@ const Navber = () => {
                 }
             </ul>
         </div>
-        <a className="btn btn-ghost lg:text-2xl text-xl font-semibold">CareerHub</a>
+        <img src={logo} alt="" className="lg:ml-5 ml-1 lg:w-52 w-32" />
+        {/* <a className="btn btn-ghost lg:text-2xl text-xl font-semibold">CareerHub</a> */}
         </div>
         <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

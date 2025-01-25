@@ -1,13 +1,14 @@
+import PropTypes from 'prop-types'; // ES6
 import { CiLocationOn } from "react-icons/ci";
 import { AiOutlineDollarCircle } from "react-icons/ai";
 
 
 
 const FeaturedCard = ({ job }) => {
-    const { company_name, educational_requirements, experiences, id, job_description, job_responsibility, job_title, job_type, location, logo, remote_or_onsite, salary,  contact_information  } = job;
-    console.log(job)
+    const { company_name, job_title, job_type, location, logo, remote_or_onsite, salary } = job;
+    // console.log(job);
     return (
-        <div className="border-2 text-left space-y-2 p-5 rounded-2xl">
+        <div className="border border-gray-400 text-left space-y-2 p-5 rounded-2xl">
             <img className="mt-5" src={logo} alt="" />
             <h3 className="text-2xl font-semibold">{job_title}</h3>
             <p className="text-[#757575] text-lg">{company_name}</p>
@@ -25,9 +26,14 @@ const FeaturedCard = ({ job }) => {
                     <p className="">{salary}</p>
                 </div>
             </div>
-            <button className="btn bg-blue-500 ">View Details</button>
+            <button className="btn bg-blue-500 font-semibold text-white text-sm rounded-sm ">View Details</button>
         </div>
     );
 };
 
 export default FeaturedCard;
+
+
+FeaturedCard.propTypes = {
+    job: PropTypes.object
+}

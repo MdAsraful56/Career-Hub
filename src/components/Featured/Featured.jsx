@@ -14,11 +14,11 @@ const Featured = () => {
 
 
     return (
-        <div className="text-center">
-            <h2 className="text-4xl font-semibold">Featured Jobs</h2>
-            <p className="">Explore thousands of job opportunities with all the information you need. Its your future</p>
+        <div className="text-center lg:mt-20 mt-10">
+            <h2 className="lg:text-4xl text-2xl font-semibold">Featured Jobs</h2>
+            <p className="lg:text-base text-sm px-10">Explore thousands of job opportunities with all the information you need. Its your future</p>
 
-            <div className="grid grid-cols-2 gap-5 rounded-xl p-10">
+            <div className="grid lg:grid-cols-2 grid-cols-1 gap-5 rounded-xl lg:px-40 pt-5 px-5 ">
                 {
                     jobs.map(job => <FeaturedCard key={job.id} job={job} />)
                 }

@@ -2,7 +2,7 @@ import socialPng from "../../assets/icons/social.png"
 
 const Footer = () => {
     return (
-        <div>
+        <div className="mt-10">
             <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
             <aside>
                 <h2 className="text-3xl font-semibold">CareerHub</h2>
