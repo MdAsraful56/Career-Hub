@@ -7,11 +7,10 @@ const Navber = () => {
     const links = <>
         <li><NavLink to='/'>Statistics</NavLink></li>
         <li><NavLink to='/appliedjobs'>Applied Jobs</NavLink></li>
-        <li><NavLink to='/'>Blog</NavLink></li>
     </>
 
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar bg-base-100 shadow-sm md:px-20 px-2">
         <div className="navbar-start">
         <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
